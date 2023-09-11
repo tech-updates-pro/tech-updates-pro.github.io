@@ -13,30 +13,31 @@
             margin: 0;
         }
 
-        /* Style for the banner ad */
         #banner-ad {
-            /* Define the ad's height, e.g., 100px, or use content-based height */
-            min-height: 80px;
-            /* Add your ad styling here */
+            min-height: 60px;
+            display: none;
         }
 
-        /* Style for the iframe to take remaining space */
         #news-iframe {
             flex-grow: 1;
-            /* This makes the iframe grow and fill the remaining space */
         }
     </style>
 </head>
 
 <body>
-    <!-- Banner Ad -->
     <div id="banner-ad">
         Banner will be shown here
         <script type="text/javascript">
-            // Your banner ad code here
         </script>
     </div>
-
-    <!-- News Content in an iframe -->
-    <iframe id="news-iframe" src="https://www.bing.com" frameborder="0"></iframe>
+    <iframe id="news-iframe" src="" frameborder="0"></iframe>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const url = urlParams.get('url');
+        const decodedUrl = decodeURIComponent(url);
+        if (decodedUrl) {
+            var iframe = document.getElementById('news-iframe');
+            iframe.src = decodedUrl;
+        }
+    </script>
 </body>
