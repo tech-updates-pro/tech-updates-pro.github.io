@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Details</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Style for the banner ad */
+        #banner-ad {
+            /* Define the ad's height, e.g., 100px, or use content-based height */
+            min-height: 80px;
+            /* Add your ad styling here */
+        }
+
+        /* Style for the iframe to take remaining space */
+        #news-iframe {
+            flex-grow: 1;
+            /* This makes the iframe grow and fill the remaining space */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Banner Ad -->
+    <div id="banner-ad">
+        Banner will be shown here
+        <script type="text/javascript">
+            // Your banner ad code here
+        </script>
+    </div>
+
+    <!-- News Content in an iframe -->
+    <iframe id="news-iframe" src="https://www.bing.com" frameborder="0"></iframe>
+</body>
